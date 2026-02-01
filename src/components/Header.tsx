@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "About", href: "#about" },
+  { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
@@ -15,7 +15,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -25,88 +25,87 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md py-3"
-          : "bg-transparent py-5"
+          ? "bg-background/95 backdrop-blur-md shadow-sm py-3"
+          : "bg-background py-4"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <span className={`font-display text-2xl font-bold transition-colors ${
-              isScrolled ? "text-primary" : "text-primary-foreground"
-            }`}>
-              Ciniquest
-            </span>
-            <span className={`font-sans text-sm font-medium transition-colors ${
-              isScrolled ? "text-muted-foreground" : "text-primary-foreground/80"
-            }`}>
-              Solutions
-            </span>
-          </a>
-
-          {/* Desktop Navigation */}
+          {/* Left Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinks.slice(0, 2).map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-4">
-            <a
-              href="tel:+2348173409440"
-              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                isScrolled ? "text-foreground" : "text-primary-foreground"
-              }`}
-            >
-              <Phone className="h-4 w-4" />
-              +234 817 340 9440
-            </a>
-            <Button variant="accent" size="sm" asChild>
-              <a href="#contact">Get Started</a>
+          {/* Logo - Centered */}
+          <a href="#" className="flex items-center gap-1.5 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mx-auto">
+            <div className="w-8 h-8 gradient-teal rounded-lg flex items-center justify-center">
+              <span className="text-accent-foreground font-bold text-sm">C</span>
+            </div>
+            <span className="font-display text-lg font-bold text-foreground">
+              Ciniquest
+            </span>
+          </a>
+
+          {/* Right Navigation */}
+          <div className="hidden md:flex items-center gap-6">
+            {navLinks.slice(2).map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            
+            {/* Search */}
+            <div className="flex items-center gap-2 bg-secondary rounded-full px-4 py-2">
+              <Search className="h-4 w-4 text-muted-foreground" />
+              <span className="text-sm text-muted-foreground">Search here...</span>
+            </div>
+
+            <Button variant="hero" size="sm">
+              Book Now
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 ml-auto"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className={isScrolled ? "text-foreground" : "text-primary-foreground"} />
+              <X className="h-6 w-6 text-foreground" />
             ) : (
-              <Menu className={isScrolled ? "text-foreground" : "text-primary-foreground"} />
+              <Menu className="h-6 w-6 text-foreground" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+          <div className="md:hidden mt-4 pb-4 animate-fade-in border-t border-border pt-4">
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`text-sm font-medium ${
-                    isScrolled ? "text-foreground" : "text-primary-foreground"
-                  }`}
+                  className="text-sm font-medium text-foreground"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="accent" size="sm" className="w-fit" asChild>
-                <a href="#contact">Get Started</a>
+              <Button variant="hero" size="sm" className="w-fit">
+                Book Now
               </Button>
             </nav>
           </div>

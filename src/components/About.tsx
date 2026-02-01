@@ -1,86 +1,90 @@
-import { Star } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import restaurantImg from "@/assets/restaurant.jpg";
+import hotelImg from "@/assets/hotel.jpg";
 
 const About = () => {
   return (
     <section id="about" className="section-padding bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
-          <div>
-            <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
-              About Us
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Your Trusted Partner in Hospitality Excellence
-            </h2>
-            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Since 2018, Ciniquest Solutions has been at the forefront of Nigeria's hospitality transformation. 
-              We respond to the growing demand for premium hospitality infrastructure by delivering profitable, 
-              sustainable businesses that elevate standards and enrich communities.
-            </p>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              With a network of international affiliates in the UAE, India, Israel, and beyond, we bring global 
-              best practices tailored to the African context.
-            </p>
+        {/* Section Badge */}
+        <div className="text-center mb-8">
+          <span className="pill-badge">
+            <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+            Let's know us
+          </span>
+        </div>
 
-            {/* Vision & Mission */}
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gold-gradient rounded-xl flex items-center justify-center">
-                  <Star className="h-6 w-6 text-accent-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-display text-lg font-semibold text-foreground mb-1">Our Vision</h4>
-                  <p className="text-muted-foreground">
-                    To remain the leading authority in hospitality solutions while significantly increasing 
-                    high-quality hospitality centers across Nigeria and Africa.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                  <Star className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-display text-lg font-semibold text-foreground mb-1">Our Mission</h4>
-                  <p className="text-muted-foreground">
-                    To successfully establish at least 10 new hospitality businesses annually, driving growth, 
-                    innovation, and excellence in the sector.
-                  </p>
-                </div>
-              </div>
+        {/* Section Title */}
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground mb-16 max-w-2xl mx-auto">
+          Explore Solutions, About Ciniquest,
+          <br className="hidden md:block" />
+          Your Success, Our Priority
+        </h2>
+
+        {/* Bento Grid */}
+        <div className="grid md:grid-cols-12 gap-4 md:gap-6">
+          {/* Left Column - About Text */}
+          <div className="md:col-span-4 bento-card p-8 flex flex-col justify-between min-h-[300px]">
+            <div>
+              <span className="pill-badge mb-4">About Us</span>
+              <p className="text-muted-foreground leading-relaxed">
+                Ciniquest Solutions is a trusted partner connecting investors with premium hospitality venues across Nigeria and Africa.
+              </p>
             </div>
+            <Button variant="outline-dark" className="w-fit mt-6 group">
+              Learn More
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
 
-          {/* Image Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="bg-secondary rounded-2xl p-6 h-40 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="block font-display text-4xl font-bold text-accent">2018</span>
-                  <span className="text-sm text-muted-foreground">Founded</span>
+          {/* Middle Column - Image Card */}
+          <div className="md:col-span-4 bento-card relative overflow-hidden min-h-[300px]">
+            <img
+              src={restaurantImg}
+              alt="Premium restaurant interior"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <span className="pill-badge bg-background/90 text-foreground mb-2">Featured</span>
+              <h3 className="text-primary-foreground font-semibold">
+                A versatile facility offering a wide range of hospitality services
+              </h3>
+            </div>
+            <button className="absolute bottom-6 right-6 w-10 h-10 bg-accent rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+              <ArrowUpRight className="h-5 w-5 text-accent-foreground" />
+            </button>
+          </div>
+
+          {/* Right Column - Image + Stats */}
+          <div className="md:col-span-4 flex flex-col gap-4 md:gap-6">
+            <div className="bento-card relative overflow-hidden flex-1 min-h-[150px]">
+              <img
+                src={hotelImg}
+                alt="Luxury hotel lobby"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                <div>
+                  <span className="text-primary-foreground/80 text-xs">18+ Years</span>
+                  <h4 className="text-primary-foreground font-semibold">Industry Experience</h4>
                 </div>
-              </div>
-              <div className="bg-primary rounded-2xl p-6 h-56 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="block font-display text-4xl font-bold text-primary-foreground">10+</span>
-                  <span className="text-sm text-primary-foreground/80">Annual Projects</span>
+                <div className="flex gap-2">
+                  <button className="w-8 h-8 bg-background/20 backdrop-blur-sm rounded-full flex items-center justify-center text-primary-foreground">
+                    ←
+                  </button>
+                  <button className="w-8 h-8 bg-background/20 backdrop-blur-sm rounded-full flex items-center justify-center text-primary-foreground">
+                    →
+                  </button>
                 </div>
               </div>
             </div>
-            <div className="space-y-4 pt-8">
-              <div className="bg-gold-gradient rounded-2xl p-6 h-56 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="block font-display text-4xl font-bold text-accent-foreground">18+</span>
-                  <span className="text-sm text-accent-foreground/80">Years Experience</span>
-                </div>
-              </div>
-              <div className="bg-secondary rounded-2xl p-6 h-40 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="block font-display text-4xl font-bold text-foreground">5+</span>
-                  <span className="text-sm text-muted-foreground">Countries</span>
-                </div>
-              </div>
+            <div className="bento-card p-6 min-h-[120px]">
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Explore the path to building profitable, sustainable hospitality businesses with our comprehensive consulting solutions.
+              </p>
             </div>
           </div>
         </div>
