@@ -14,7 +14,7 @@ const Hero = () => {
             className="w-full h-[500px] md:h-[600px] lg:h-[650px] object-cover"
           />
           
-          {/* Dark Overlay */}
+          {/* Dark Overlay with brand blue tint */}
           <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/30 to-navy/60" />
 
           {/* Content Overlay */}
@@ -28,7 +28,7 @@ const Hero = () => {
                     {[1, 2, 3, 4].map((i) => (
                       <div 
                         key={i} 
-                        className="w-8 h-8 rounded-full bg-gradient-to-br from-teal to-teal-light border-2 border-background"
+                        className="w-8 h-8 rounded-full gradient-brand border-2 border-background"
                       />
                     ))}
                   </div>
@@ -41,15 +41,15 @@ const Hero = () => {
               {/* Right - Social Links */}
               <div className="hidden md:flex flex-col gap-3 items-end">
                 <a href="#" className="flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-foreground hover:bg-background transition-colors">
-                  <Instagram className="h-4 w-4" />
+                  <Instagram className="h-4 w-4 text-brand" />
                   Instagram
                 </a>
                 <a href="#" className="flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-foreground hover:bg-background transition-colors">
-                  <Facebook className="h-4 w-4" />
+                  <Facebook className="h-4 w-4 text-brand" />
                   Facebook
                 </a>
                 <a href="#" className="flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-foreground hover:bg-background transition-colors">
-                  <Twitter className="h-4 w-4" />
+                  <Twitter className="h-4 w-4 text-brand" />
                   Twitter
                 </a>
               </div>
@@ -73,18 +73,10 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Bottom - App Badges Placeholder */}
+            {/* Bottom - Tagline */}
             <div className="flex justify-center gap-4">
               <div className="flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2">
-                <span className="text-xs font-medium text-foreground">Get the app</span>
-                <div className="flex gap-2">
-                  <div className="w-6 h-6 bg-foreground rounded flex items-center justify-center">
-                    <span className="text-background text-xs">▶</span>
-                  </div>
-                  <div className="w-6 h-6 bg-foreground rounded flex items-center justify-center">
-                    <span className="text-background text-xs">🍎</span>
-                  </div>
-                </div>
+                <span className="text-sm font-medium text-brand italic">Giving the best</span>
               </div>
             </div>
           </div>

@@ -51,9 +51,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        teal: {
-          DEFAULT: "hsl(var(--teal))",
-          light: "hsl(var(--teal-light))",
+        brand: {
+          DEFAULT: "hsl(var(--brand-blue))",
+          light: "hsl(var(--brand-blue-light))",
+          dark: "hsl(var(--brand-blue-dark))",
         },
         navy: "hsl(var(--navy))",
         gray: {
@@ -86,6 +87,7 @@ export default {
         md: "var(--shadow-md)",
         lg: "var(--shadow-lg)",
         card: "var(--shadow-card)",
+        brand: "var(--shadow-brand)",
       },
       keyframes: {
         "accordion-down": {

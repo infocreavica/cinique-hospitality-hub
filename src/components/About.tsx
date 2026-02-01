@@ -10,7 +10,7 @@ const About = () => {
         {/* Section Badge */}
         <div className="text-center mb-8">
           <span className="pill-badge">
-            <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+            <span className="w-1.5 h-1.5 bg-brand rounded-full" />
             Let's know us
           </span>
         </div>
@@ -52,7 +52,7 @@ const About = () => {
                 A versatile facility offering a wide range of hospitality services
               </h3>
             </div>
-            <button className="absolute bottom-6 right-6 w-10 h-10 bg-accent rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+            <button className="absolute bottom-6 right-6 w-10 h-10 bg-brand rounded-full flex items-center justify-center hover:scale-110 transition-transform">
               <ArrowUpRight className="h-5 w-5 text-accent-foreground" />
             </button>
           </div>
