@@ -1,78 +1,93 @@
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Instagram, Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroCinema from "@/assets/hero-cinema.jpg";
+import heroBuilding from "@/assets/hero-building.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroCinema}
-          alt="Premium cinema interior"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/50" />
-      </div>
+    <section className="relative pt-20 pb-8 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        {/* Hero Image Container with Curved Bottom */}
+        <div className="relative rounded-[2.5rem] overflow-hidden">
+          <img
+            src={heroBuilding}
+            alt="Modern hospitality venue"
+            className="w-full h-[500px] md:h-[600px] lg:h-[650px] object-cover"
+          />
+          
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/30 to-navy/60" />
 
-      {/* Content */}
-      <div className="container mx-auto px-4 md:px-6 relative z-10 pt-24">
-        <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 mb-6 animate-fade-in">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-sm text-primary-foreground/90">Premier Hospitality Consulting</span>
-          </div>
+          {/* Content Overlay */}
+          <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-10">
+            {/* Top Content */}
+            <div className="flex justify-between items-start">
+              {/* Left - Avatars & Stats */}
+              <div className="hidden md:block">
+                <div className="bg-background/90 backdrop-blur-sm rounded-2xl p-4 max-w-[200px]">
+                  <div className="flex -space-x-2 mb-2">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div 
+                        key={i} 
+                        className="w-8 h-8 rounded-full bg-gradient-to-br from-teal to-teal-light border-2 border-background"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Join <span className="font-semibold text-foreground">500+</span> successful venues built across Nigeria
+                  </p>
+                </div>
+              </div>
 
-          {/* Headline */}
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Creating World-Class
-            <span className="block text-accent">Hospitality Experiences</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            End-to-end solutions for cinemas, hotels, restaurants, and entertainment venues across Nigeria and Africa.
-          </p>
-
-          {/* Stats */}
-          <div className="flex flex-wrap gap-8 mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <div className="text-center">
-              <span className="block font-display text-3xl md:text-4xl font-bold text-accent">18+</span>
-              <span className="text-sm text-primary-foreground/70">Years Experience</span>
+              {/* Right - Social Links */}
+              <div className="hidden md:flex flex-col gap-3 items-end">
+                <a href="#" className="flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-foreground hover:bg-background transition-colors">
+                  <Instagram className="h-4 w-4" />
+                  Instagram
+                </a>
+                <a href="#" className="flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-foreground hover:bg-background transition-colors">
+                  <Facebook className="h-4 w-4" />
+                  Facebook
+                </a>
+                <a href="#" className="flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-foreground hover:bg-background transition-colors">
+                  <Twitter className="h-4 w-4" />
+                  Twitter
+                </a>
+              </div>
             </div>
-            <div className="text-center">
-              <span className="block font-display text-3xl md:text-4xl font-bold text-accent">10+</span>
-              <span className="text-sm text-primary-foreground/70">Annual Projects</span>
-            </div>
-            <div className="text-center">
-              <span className="block font-display text-3xl md:text-4xl font-bold text-accent">5+</span>
-              <span className="text-sm text-primary-foreground/70">Countries</span>
-            </div>
-          </div>
 
-          {/* CTAs */}
-          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button variant="accent" size="lg" className="group" asChild>
-              <a href="#contact">
-                Start Your Project
+            {/* Center Content */}
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-4">
+                Build Hospitality Venues, Create
+                <br className="hidden md:block" />
+                Experiences & Grow Your Business
+              </h1>
+              <p className="text-primary-foreground/80 text-sm md:text-base mb-6 max-w-xl mx-auto">
+                End-to-end consulting for cinemas, hotels, restaurants, and entertainment venues across Nigeria and Africa.
+              </p>
+
+              {/* CTA Button */}
+              <Button variant="accent" size="lg" className="group">
+                Discover Services
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-            <Button variant="hero" size="lg" asChild>
-              <a href="#portfolio">
-                <Play className="mr-2 h-5 w-5" />
-                View Our Work
-              </a>
-            </Button>
-          </div>
-        </div>
-      </div>
+              </Button>
+            </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-accent rounded-full" />
+            {/* Bottom - App Badges Placeholder */}
+            <div className="flex justify-center gap-4">
+              <div className="flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2">
+                <span className="text-xs font-medium text-foreground">Get the app</span>
+                <div className="flex gap-2">
+                  <div className="w-6 h-6 bg-foreground rounded flex items-center justify-center">
+                    <span className="text-background text-xs">▶</span>
+                  </div>
+                  <div className="w-6 h-6 bg-foreground rounded flex items-center justify-center">
+                    <span className="text-background text-xs">🍎</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
