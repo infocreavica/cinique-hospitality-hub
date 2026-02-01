@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { label: "About Us", href: "#about" },
@@ -37,7 +38,7 @@ const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-brand transition-colors"
               >
                 {link.label}
               </a>
@@ -45,13 +46,12 @@ const Header = () => {
           </nav>
 
           {/* Logo - Centered */}
-          <a href="#" className="flex items-center gap-1.5 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mx-auto">
-            <div className="w-8 h-8 gradient-teal rounded-lg flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-sm">C</span>
-            </div>
-            <span className="font-display text-lg font-bold text-foreground">
-              Ciniquest
-            </span>
+          <a href="#" className="flex items-center gap-2 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mx-auto">
+            <img 
+              src={logo} 
+              alt="CiniQuest Solutions" 
+              className="h-10 md:h-12 w-auto object-contain"
+            />
           </a>
 
           {/* Right Navigation */}
@@ -60,7 +60,7 @@ const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-brand transition-colors"
               >
                 {link.label}
               </a>
@@ -72,7 +72,7 @@ const Header = () => {
               <span className="text-sm text-muted-foreground">Search here...</span>
             </div>
 
-            <Button variant="hero" size="sm">
+            <Button variant="brand" size="sm">
               Book Now
             </Button>
           </div>
@@ -104,7 +104,7 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="w-fit">
+              <Button variant="brand" size="sm" className="w-fit">
                 Book Now
               </Button>
             </nav>

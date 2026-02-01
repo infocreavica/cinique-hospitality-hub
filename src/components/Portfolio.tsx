@@ -44,7 +44,7 @@ const Portfolio = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
           <div className="flex items-center gap-4">
             <span className="pill-badge">
-              <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+              <span className="w-1.5 h-1.5 bg-brand rounded-full" />
               Facilities
             </span>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
@@ -77,7 +77,7 @@ const Portfolio = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
-                  <span className="absolute top-4 left-4 pill-badge bg-accent text-accent-foreground text-xs">
+                  <span className="absolute top-4 left-4 pill-badge bg-brand text-accent-foreground text-xs">
                     {facility.tag}
                   </span>
                   <div className="absolute bottom-4 left-4 right-4">

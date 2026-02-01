@@ -23,7 +23,7 @@ const Community = () => {
               <div className="bento-card overflow-hidden h-[180px]">
                 <img src={clubImg} alt="" className="w-full h-full object-cover" />
               </div>
-              <div className="bento-card p-4 h-[120px] flex items-center justify-center gradient-teal">
+              <div className="bento-card p-4 h-[120px] flex items-center justify-center gradient-brand">
                 <div className="text-center">
                   <p className="text-accent-foreground text-sm font-medium mb-2">
                     Join our community of partners
@@ -47,7 +47,7 @@ const Community = () => {
           {/* Testimonial */}
           <div className="text-center lg:text-left">
             <span className="pill-badge mb-4">
-              <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+              <span className="w-1.5 h-1.5 bg-brand rounded-full" />
               Testimonials
             </span>
             
@@ -56,7 +56,7 @@ const Community = () => {
             </blockquote>
 
             <div className="flex items-center gap-4 justify-center lg:justify-start">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-teal to-teal-light flex items-center justify-center text-accent-foreground font-bold text-lg">
+              <div className="w-14 h-14 rounded-full gradient-brand flex items-center justify-center text-accent-foreground font-bold text-lg">
                 AM
               </div>
               <div className="text-left">

@@ -20,7 +20,7 @@ const Services = () => {
           <div>
             {/* Icon */}
             <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6">
-              <Sun className="h-8 w-8 text-accent" />
+              <Sun className="h-8 w-8 text-brand" />
             </div>
 
             {/* Tabs */}
@@ -65,7 +65,7 @@ const Services = () => {
 
               {/* Navigation Dots */}
               <div className="absolute bottom-6 right-6 flex gap-2">
-                <div className="w-2 h-2 rounded-full bg-accent" />
+                <div className="w-2 h-2 rounded-full bg-brand" />
                 <div className="w-2 h-2 rounded-full bg-background/50" />
                 <div className="w-2 h-2 rounded-full bg-background/50" />
               </div>
@@ -91,7 +91,7 @@ const Services = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
-                <button className="absolute bottom-4 right-4 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                <button className="absolute bottom-4 right-4 w-8 h-8 bg-brand rounded-full flex items-center justify-center">
                   <span className="text-accent-foreground text-lg">+</span>
                 </button>
               </div>
