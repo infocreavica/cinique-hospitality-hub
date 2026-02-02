@@ -5,9 +5,9 @@ import heroBuilding from "@/assets/hero-building.jpg";
 const Hero = () => {
   return (
     <section className="relative pt-20 pb-8 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="w-full px-0">
         {/* Hero Image Container with Curved Bottom */}
-        <div className="relative rounded-[2.5rem] overflow-hidden">
+        <div className="relative overflow-hidden">
           <img
             src={heroBuilding}
             alt="Modern hospitality venue"
