@@ -1,18 +1,12 @@
 import { ArrowRight, Instagram, Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroCinema from "@/assets/hero-cinema.jpg";
-
 const Hero = () => {
-  return (
-    <section className="relative pt-20 pb-8 bg-background">
+  return <section className="relative pt-20 pb-8 bg-background">
       <div className="w-full px-0">
         {/* Hero Image Container with Curved Bottom */}
         <div className="relative overflow-hidden">
-          <img
-            src={heroCinema}
-            alt="Modern cinema venue"
-            className="w-full h-[500px] md:h-[600px] lg:h-[650px] object-cover"
-          />
+          <img src={heroCinema} alt="Modern cinema venue" className="w-full h-[500px] md:h-[600px] lg:h-[650px] object-cover" />
           
           {/* Dark Overlay with brand blue tint */}
           <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/30 to-navy/60" />
@@ -48,9 +42,7 @@ const Hero = () => {
                 <br className="hidden md:block" />
                 Experiences & Grow Your Business
               </h1>
-              <p className="text-primary-foreground/80 text-sm md:text-base mb-6 max-w-xl mx-auto">
-                End-to-end consulting for cinemas, hotels, restaurants, and entertainment venues across Nigeria and Africa.
-              </p>
+              <p className="text-primary-foreground/80 text-sm md:text-base mb-6 max-w-xl mx-auto">End to end consulting for cinemas, hotels, restaurants, and entertainment venues across Nigeria and Africa.</p>
 
               {/* CTA Button */}
               <Button variant="accent" size="lg" className="group">
@@ -68,8 +60,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

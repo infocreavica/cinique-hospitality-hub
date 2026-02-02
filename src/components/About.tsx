@@ -1,10 +1,8 @@
 import { ArrowUpRight, ArrowRight, Target, Eye, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import founderImg from "@/assets/founder.jpg";
-
 const About = () => {
-  return (
-    <section id="about" className="section-padding bg-background">
+  return <section id="about" className="section-padding bg-background">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Badge */}
         <div className="text-center mb-8">
@@ -29,9 +27,7 @@ const About = () => {
           <div className="md:col-span-4 bento-card p-8 flex flex-col justify-between min-h-[300px]">
             <div>
               <span className="pill-badge mb-4">Who We Are</span>
-              <p className="text-muted-foreground leading-relaxed">
-                We deliver end-to-end solutions for cinemas, hotels, food & beverage outlets, recreation centers, and leisure facilities — ensuring seamless operations, regulatory compliance, and exceptional guest experiences.
-              </p>
+              <p className="text-muted-foreground leading-relaxed">We deliver end to end solutions for cinemas, hotels, food & beverage outlets, recreation centers, and leisure facilities ensuring seamless operations, regulatory compliance, and exceptional guest experiences.</p>
             </div>
             <Button variant="outline-dark" className="w-fit mt-6 group">
               Learn More
@@ -63,11 +59,7 @@ const About = () => {
 
           {/* Right Column - Founder */}
           <div className="md:col-span-4 bento-card relative overflow-hidden min-h-[300px]">
-            <img
-              src={founderImg}
-              alt="Akaninyene Macauley - Founder"
-              className="w-full h-full object-cover object-top"
-            />
+            <img src={founderImg} alt="Akaninyene Macauley - Founder" className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6">
               <span className="pill-badge bg-brand text-accent-foreground mb-3">Founder</span>
@@ -109,8 +101,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;

@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="section-padding bg-secondary/30">
+  return <section id="contact" className="section-padding bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -29,10 +27,7 @@ const Contact = () => {
               <h3 className="font-display text-2xl font-bold mb-6">Get In Touch</h3>
               
               <div className="space-y-6">
-                <a 
-                  href="tel:+2348173409440" 
-                  className="flex items-center gap-4 group"
-                >
+                <a href="tel:+2348173409440" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5 text-accent-foreground" />
                   </div>
@@ -44,17 +39,14 @@ const Contact = () => {
                   </div>
                 </a>
 
-                <a 
-                  href="mailto:info@ciniquestsolutions.com" 
-                  className="flex items-center gap-4 group"
-                >
+                <a href="mailto:info@ciniquestsolutions.com" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="h-5 w-5 text-foreground" />
                   </div>
                   <div>
                     <p className="text-muted-foreground text-sm">Email Us</p>
                     <p className="font-semibold group-hover:text-brand transition-colors">
-                      info@ciniquestsolutions.com
+                      info@ciniquest.com
                     </p>
                   </div>
                 </a>
@@ -116,11 +108,7 @@ const Contact = () => {
 
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Tell us about your project..." 
-                  rows={4}
-                />
+                <Textarea id="message" placeholder="Tell us about your project..." rows={4} />
               </div>
 
               <Button variant="hero" className="w-full">
@@ -131,8 +119,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;

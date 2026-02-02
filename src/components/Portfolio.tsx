@@ -3,37 +3,30 @@ import { Button } from "@/components/ui/button";
 import cinemaImg from "@/assets/hero-cinema.jpg";
 import restaurantImg from "@/assets/restaurant.jpg";
 import clubImg from "@/assets/club.jpg";
-
-const projects = [
-  {
-    title: "Sky Cinemas",
-    subtitle: "State-of-the-Art Cinema",
-    description: "A multi-screen cinema experience featuring premium seating, cutting-edge projection technology, and immersive sound systems.",
-    image: cinemaImg,
-    tag: "Cinema",
-    location: "Sky Mall, Sangotedo, Lagos",
-  },
-  {
-    title: "Lush Club",
-    subtitle: "Vibrant Nightlife Venue",
-    description: "A premier nightlife and social venue with advanced lighting, world-class sound installations, and sophisticated ambiance.",
-    image: clubImg,
-    tag: "Entertainment",
-    location: "Sky Mall, Sangotedo, Lagos",
-  },
-  {
-    title: "Rosticks Restaurant",
-    subtitle: "Popular Dining Destination",
-    description: "An upscale dining destination offering local and international cuisine in a comfortable, elegant setting.",
-    image: restaurantImg,
-    tag: "Restaurant",
-    location: "Sky Mall, Sangotedo, Lagos",
-  },
-];
-
+const projects = [{
+  title: "Sky Cinemas",
+  subtitle: "State-of-the-Art Cinema",
+  description: "A multi-screen cinema experience featuring premium seating, cutting-edge projection technology, and immersive sound systems.",
+  image: cinemaImg,
+  tag: "Cinema",
+  location: "Sky Mall, Sangotedo, Lagos"
+}, {
+  title: "Lush Club",
+  subtitle: "Vibrant Nightlife Venue",
+  description: "A premier nightlife and social venue with advanced lighting, world-class sound installations, and sophisticated ambiance.",
+  image: clubImg,
+  tag: "Entertainment",
+  location: "Sky Mall, Sangotedo, Lagos"
+}, {
+  title: "Rosticks Restaurant",
+  subtitle: "Popular Dining Destination",
+  description: "An upscale dining destination offering local and international cuisine in a comfortable, elegant setting.",
+  image: restaurantImg,
+  tag: "Restaurant",
+  location: "Sky Mall, Sangotedo, Lagos"
+}];
 const Portfolio = () => {
-  return (
-    <section id="portfolio" className="section-padding bg-background">
+  return <section id="portfolio" className="section-padding bg-background">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -44,24 +37,14 @@ const Portfolio = () => {
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Flagship Projects
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            These thriving venues within the modern Sky Mall complex in Sangotedo, Lagos, demonstrate our ability to deliver profitable, high-impact hospitality projects.
-          </p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">These thriving venues within the modern Sky Mall complex in Sangotedo, Lagos, demonstrate our ability to deliver profitable, high impact hospitality projects.</p>
         </div>
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className="bento-card group"
-            >
+          {projects.map(project => <div key={project.title} className="bento-card group">
               <div className="relative h-[240px] overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
                 <span className="absolute top-4 left-4 pill-badge bg-brand text-accent-foreground text-xs">
                   {project.tag}
@@ -80,8 +63,7 @@ const Portfolio = () => {
                   {project.location}
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Track Record Banner */}
@@ -100,8 +82,6 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Portfolio;
