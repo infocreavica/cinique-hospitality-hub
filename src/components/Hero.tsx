@@ -21,22 +21,8 @@ const Hero = () => {
           <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-10">
             {/* Top Content */}
             <div className="flex justify-between items-start">
-              {/* Left - Avatars & Stats */}
-              <div className="hidden md:block">
-                <div className="bg-background/90 backdrop-blur-sm rounded-2xl p-4 max-w-[200px]">
-                  <div className="flex -space-x-2 mb-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div 
-                        key={i} 
-                        className="w-8 h-8 rounded-full gradient-brand border-2 border-background"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-xs text-muted-foreground">
-                    Join <span className="font-semibold text-foreground">500+</span> successful venues built across Nigeria
-                  </p>
-                </div>
-              </div>
+              {/* Left - Empty spacer */}
+              <div className="hidden md:block" />
 
               {/* Right - Social Links */}
               <div className="hidden md:flex flex-col gap-3 items-end">
