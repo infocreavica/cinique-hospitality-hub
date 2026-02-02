@@ -15,7 +15,7 @@ const Hero = () => {
           />
           
           {/* Dark Overlay with brand blue tint */}
-          <div className="absolute inset-0 bg-gradient-to-b from-brand/30 via-transparent to-navy/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/30 to-navy/60" />
 
           {/* Content Overlay */}
           <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-10">
