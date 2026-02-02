@@ -1,16 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const partners = [
-  "Sky Cinemas",
-  "Filmhouse",
-  "Genesis",
-  "Silverbird",
-  "Sky Mall",
-  "Lush Club",
-  "Rosticks",
-  "Sky Films",
-];
 
 const CTA = () => {
   return (
@@ -39,17 +29,6 @@ const CTA = () => {
           </p>
         </div>
 
-        {/* Partner Logos */}
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12 py-8 border-y border-border">
-          {partners.map((partner) => (
-            <span
-              key={partner}
-              className="text-muted-foreground font-medium text-sm md:text-base hover:text-foreground transition-colors cursor-pointer"
-            >
-              {partner}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );
