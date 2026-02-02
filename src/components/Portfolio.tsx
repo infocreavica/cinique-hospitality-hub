@@ -67,11 +67,11 @@ const Portfolio = () => {
         </div>
 
         {/* Track Record Banner */}
-        <div className="mt-12 bento-card p-8 bg-foreground text-background">
+        <div className="mt-12 bento-card p-8 bg-navy text-white">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
-              <h3 className="font-display text-2xl font-bold mb-2">Our Track Record</h3>
-              <p className="text-background/70 max-w-xl">
+              <h3 className="font-display text-2xl font-bold mb-2 text-white">Our Track Record</h3>
+              <p className="text-white/80 max-w-xl">
                 Since 2018, Ciniquest Solutions has been instrumental in developing successful venues across Nigeria. We don't just build venues — we create profitable, sustainable businesses that elevate standards and enrich communities.
               </p>
             </div>
