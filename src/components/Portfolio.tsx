@@ -1,38 +1,33 @@
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cinemaImg from "@/assets/hero-cinema.jpg";
 import restaurantImg from "@/assets/restaurant.jpg";
 import clubImg from "@/assets/club.jpg";
-import hotelImg from "@/assets/hotel.jpg";
 
-const facilities = [
+const projects = [
   {
-    title: "Cinema Setup",
-    subtitle: "24/7 Excellence",
-    description: "State-of-the-art multi-screen cinema experience with premium seating",
+    title: "Sky Cinemas",
+    subtitle: "State-of-the-Art Cinema",
+    description: "A multi-screen cinema experience featuring premium seating, cutting-edge projection technology, and immersive sound systems.",
     image: cinemaImg,
-    tag: "Cinemas",
+    tag: "Cinema",
+    location: "Sky Mall, Sangotedo, Lagos",
   },
   {
-    title: "Restaurant Design",
-    subtitle: "Premium dining",
-    description: "Comfortable spaces with excellent hospitality care",
-    image: restaurantImg,
-    tag: "Restaurants",
-  },
-  {
-    title: "Club & Nightlife",
-    subtitle: "Entertainment",
-    description: "Advanced lighting and sound installations for vibrant venues",
+    title: "Lush Club",
+    subtitle: "Vibrant Nightlife Venue",
+    description: "A premier nightlife and social venue with advanced lighting, world-class sound installations, and sophisticated ambiance.",
     image: clubImg,
-    tag: "Clubs",
+    tag: "Entertainment",
+    location: "Sky Mall, Sangotedo, Lagos",
   },
   {
-    title: "Hotel Management",
-    subtitle: "Luxury stays",
-    description: "Comprehensive solutions for modern, efficient hospitality",
-    image: hotelImg,
-    tag: "Hotels",
+    title: "Rosticks Restaurant",
+    subtitle: "Popular Dining Destination",
+    description: "An upscale dining destination offering local and international cuisine in a comfortable, elegant setting.",
+    image: restaurantImg,
+    tag: "Restaurant",
+    location: "Sky Mall, Sangotedo, Lagos",
   },
 ];
 
@@ -41,71 +36,68 @@ const Portfolio = () => {
     <section id="portfolio" className="section-padding bg-background">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
-          <div className="flex items-center gap-4">
-            <span className="pill-badge">
-              <span className="w-1.5 h-1.5 bg-brand rounded-full" />
-              Facilities
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-              Explore Our Facilities
-            </h2>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 bg-secondary rounded-full px-4 py-2">
-              <span className="text-sm text-muted-foreground">Search here...</span>
-            </div>
-            <Button variant="hero" size="sm">
-              View All
-            </Button>
-          </div>
+        <div className="text-center mb-12">
+          <span className="pill-badge mb-4">
+            <span className="w-1.5 h-1.5 bg-brand rounded-full" />
+            Our Portfolio
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            Flagship Projects
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            These thriving venues within the modern Sky Mall complex in Sangotedo, Lagos, demonstrate our ability to deliver profitable, high-impact hospitality projects.
+          </p>
         </div>
 
-        {/* Facilities Carousel */}
-        <div className="relative">
-          <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
-            {facilities.map((facility, index) => (
-              <div
-                key={facility.title}
-                className="flex-shrink-0 w-[280px] md:w-[300px] bento-card snap-start"
-              >
-                <div className="relative h-[200px] overflow-hidden">
-                  <img
-                    src={facility.image}
-                    alt={facility.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
-                  <span className="absolute top-4 left-4 pill-badge bg-brand text-accent-foreground text-xs">
-                    {facility.tag}
-                  </span>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="font-semibold text-primary-foreground">{facility.title}</h3>
-                    <p className="text-primary-foreground/70 text-sm">{facility.subtitle}</p>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <p className="text-muted-foreground text-sm">{facility.description}</p>
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="bento-card group"
+            >
+              <div className="relative h-[240px] overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
+                <span className="absolute top-4 left-4 pill-badge bg-brand text-accent-foreground text-xs">
+                  {project.tag}
+                </span>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="font-semibold text-primary-foreground text-xl">{project.title}</h3>
+                  <p className="text-primary-foreground/70 text-sm">{project.subtitle}</p>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Navigation Arrows */}
-          <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-background border border-border rounded-full flex items-center justify-center shadow-md hover:bg-secondary transition-colors hidden md:flex">
-            <ChevronLeft className="h-5 w-5 text-foreground" />
-          </button>
-          <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-background border border-border rounded-full flex items-center justify-center shadow-md hover:bg-secondary transition-colors hidden md:flex">
-            <ChevronRight className="h-5 w-5 text-foreground" />
-          </button>
+              <div className="p-5">
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex items-center gap-2 text-muted-foreground text-xs">
+                  <MapPin className="h-3.5 w-3.5" />
+                  {project.location}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom Info */}
-        <div className="mt-8 text-right">
-          <p className="text-muted-foreground text-sm max-w-md ml-auto">
-            Book an appointment with 50+ successful venues for comprehensive venue setup, operations management, licensing, and 24/7 expert care.
-          </p>
+        {/* Track Record Banner */}
+        <div className="mt-12 bento-card p-8 bg-foreground text-background">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h3 className="font-display text-2xl font-bold mb-2">Our Track Record</h3>
+              <p className="text-background/70 max-w-xl">
+                Since 2018, Ciniquest Solutions has been instrumental in developing successful venues across Nigeria. We don't just build venues — we create profitable, sustainable businesses that elevate standards and enrich communities.
+              </p>
+            </div>
+            <Button variant="hero" className="flex-shrink-0">
+              Partner With Us
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
