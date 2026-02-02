@@ -1,6 +1,6 @@
 import { ArrowRight, Instagram, Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBuilding from "@/assets/hero-building.jpg";
+import heroCinema from "@/assets/hero-cinema.jpg";
 
 const Hero = () => {
   return (
@@ -9,8 +9,8 @@ const Hero = () => {
         {/* Hero Image Container with Curved Bottom */}
         <div className="relative overflow-hidden">
           <img
-            src={heroBuilding}
-            alt="Modern hospitality venue"
+            src={heroCinema}
+            alt="Modern cinema venue"
             className="w-full h-[500px] md:h-[600px] lg:h-[650px] object-cover"
           />
           
