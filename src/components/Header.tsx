@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 const navLinks = [
@@ -65,16 +64,6 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            
-            {/* Search */}
-            <div className="flex items-center gap-2 bg-secondary rounded-full px-4 py-2">
-              <Search className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm text-muted-foreground">Search here...</span>
-            </div>
-
-            <Button variant="brand" size="sm">
-              Book Now
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -104,9 +93,6 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="brand" size="sm" className="w-fit">
-                Book Now
-              </Button>
             </nav>
           </div>
         )}
