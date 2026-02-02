@@ -25,7 +25,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info */}
           <div className="space-y-6">
-            <div className="bento-card p-8 bg-foreground text-background">
+            <div className="bento-card p-8 bg-card text-card-foreground border border-border">
               <h3 className="font-display text-2xl font-bold mb-6">Get In Touch</h3>
               
               <div className="space-y-6">
@@ -37,7 +37,7 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-accent-foreground" />
                   </div>
                   <div>
-                    <p className="text-background/60 text-sm">Call Us</p>
+                    <p className="text-muted-foreground text-sm">Call Us</p>
                     <p className="font-semibold group-hover:text-brand transition-colors">
                       +234 817 340 9440
                     </p>
@@ -48,11 +48,11 @@ const Contact = () => {
                   href="mailto:info@ciniquestsolutions.com" 
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-12 h-12 bg-background/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-background" />
+                  <div className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-5 w-5 text-foreground" />
                   </div>
                   <div>
-                    <p className="text-background/60 text-sm">Email Us</p>
+                    <p className="text-muted-foreground text-sm">Email Us</p>
                     <p className="font-semibold group-hover:text-brand transition-colors">
                       info@ciniquestsolutions.com
                     </p>
@@ -60,21 +60,21 @@ const Contact = () => {
                 </a>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-background/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-background" />
+                  <div className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-5 w-5 text-foreground" />
                   </div>
                   <div>
-                    <p className="text-background/60 text-sm">Location</p>
+                    <p className="text-muted-foreground text-sm">Location</p>
                     <p className="font-semibold">Lagos, Nigeria</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-background/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-5 w-5 text-background" />
+                  <div className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Clock className="h-5 w-5 text-foreground" />
                   </div>
                   <div>
-                    <p className="text-background/60 text-sm">Business Hours</p>
+                    <p className="text-muted-foreground text-sm">Business Hours</p>
                     <p className="font-semibold">Mon - Fri: 9AM - 6PM</p>
                   </div>
                 </div>
