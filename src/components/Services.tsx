@@ -112,8 +112,8 @@ const Services = () => {
           <div className="space-y-4">
             <div className="bento-card relative overflow-hidden h-[350px]">
               <img
-                src={clubImg}
-                alt="Premium entertainment venue"
+                src={cinemaImg}
+                alt="Sky Cinemas venue"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/30 to-transparent" />
