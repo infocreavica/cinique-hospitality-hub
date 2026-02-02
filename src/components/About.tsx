@@ -1,7 +1,6 @@
 import { ArrowUpRight, ArrowRight, Target, Eye, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import restaurantImg from "@/assets/restaurant.jpg";
-import hotelImg from "@/assets/hotel.jpg";
+import founderImg from "@/assets/founder.jpg";
 
 const About = () => {
   return (
@@ -65,9 +64,9 @@ const About = () => {
           {/* Right Column - Founder */}
           <div className="md:col-span-4 bento-card relative overflow-hidden min-h-[300px]">
             <img
-              src={restaurantImg}
-              alt="Premium hospitality venue"
-              className="w-full h-full object-cover"
+              src={founderImg}
+              alt="Akaninyene Macauley - Founder"
+              className="w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6">
